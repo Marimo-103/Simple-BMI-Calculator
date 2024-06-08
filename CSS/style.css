@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+}
+
+li {
+    list-style-type: disc;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+/* ================================================================================ */
+
+.calculator {
+    margin: 0px auto;
+    position: relative;
+    max-width: 400px;
+    /* height: 700px; */
+    perspective: 1000px;
+}
+
+.genders {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.genders button:hover {
+    border: 1px solid #1C1E53;
+    background: #1C1E53;
+    color: #fff;
+}
+
+.genders button:nth-child(even):hover {
+    border: 1px solid #431c53;
+    background: #431c53;
+    color: #fff;
+}
+
+#display {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.content {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.female {
+    transform: rotateY(180deg);
+}
+
+.display-male {
+    transform: rotateY(0deg);
+}
+
+.display-female {
+    transform: rotateY(180deg);
+}
+
+ .maleBMI, .femaleBMI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 30px 20px;
+    width: 100%;
+    border-radius: 20px;
+    background: #1C1E53;
+    -webkit-box-shadow: 0px 0px 72px -9px #1C1E53;
+    -moz-box-shadow: 0px 0px 72px -9px #1C1E53;  
+    box-shadow: 0px 0px 72px -9px #1C1E53;
+}
+
+ .femaleBMI {
+    background: #431c53;
+    -webkit-box-shadow: 0px 0px 72px -9px #431c53;
+    -moz-box-shadow: 0px 0px 72px -9px #431c53;  
+    box-shadow: 0px 0px 72px -9px #431c53;
+}
+
+ h1 {
+    font-size: 28px;
+    margin: 10px 0 30px;
+}
+
+ input {
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1.5px solid rgba(255, 255, 255, 0.185);
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--Grey, #F4F6FC);
+    font-size: 16px;
+    outline: none;
+}
+
+ button {
+    padding: 8px 26px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #FCD980;
+    background: #FCD980;
+    border-radius: 10px;
+    color: #1B1C2B;
+    line-height: 30px;
+    transition: .3s;
+    margin: 20px 0;
+}
+
+ button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.hError,
+.wError {
+    font-size: 12px;
+    color: #f44336;
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    transform: translateY(-90%);
+}
+
+.error_div {
+    position: relative;
+}
+
+.error_div input {
+    width: 100%;
+}
+
+.description {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+form {
+    margin-left: auto;
+}
+
+form button {
+    padding: 5px 36px;
+}
+
+
+/* ========================================================================= */
+
+@media (min-width:280px) and (max-width:575.99px) {
+
+    .maleBMI, .femaleBMI {
+        padding: 20px 20px 10px;
+        border-radius: 10px;
+        
+    }
+
+    h1 {
+        font-size: 25px;
+        margin: 5px 0 20px;
+    }
+
+    input {
+        margin: 12px 0;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.185);
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    input::placeholder {
+        font-size: 12px;
+    }
+
+    .hError, .wError {
+        font-size: 10px;
+        left: 1px;
+        transform: translateY(-67%);
+        letter-spacing: 1px;
+    }
+
+    button {
+        padding: 4px 26px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        line-height: 27px;
+        margin: 15px 0;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+}

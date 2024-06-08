@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="calculator">
+        <div class="container">
+            <div class="calculator">
+                <div class="genders">
+                    <button id="male-btn">Male</button>
+                    <button id="female-btn">Female</button>
+                </div>
+                <div id="display" class="display-male">
+                    <div class="content male">
+                        <!-- Male BMI Calculator content -->
+                        <div class="maleBMI">
+                            <h1>Male Calculation:</h1>
+                            <div class="error_div">
+                                <input class="height" type="number" min="1" placeholder="Enter your height in INCH">
+                                <div class="hError"></div>
+                            </div>
+                            <div class="error_div">
+                                <input class="weight" type="number" min="1" placeholder="Enter your weight in KG">
+                                <div class="wError"></div>
+                            </div>
+                            <button class="calculateBtn">Calculate</button>
+                            <input type="text" class="result" placeholder="Your BMI will be shown here after calculation" >
+                            <p class="description">Description :</p>
+                            <form action="">
+                                <button type="submit">Reset </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="content female">
+                        <!-- Female BMI Calculator content -->
+                        <div class="femaleBMI">
+                            <h1>Female Calculation:</h1>
+                            <div class="error_div">
+                                <input class="height" type="number" placeholder="Enter your height in INCH">
+                                <div class="hError"></div>
+                            </div>
+                            <div class="error_div">
+                                <input class="weight" type="number" placeholder="Enter your weight in KG">
+                                <div class="wError"></div>
+                            </div>
+                            <button class="calculateBtn">Calculate</button>
+                            <input type="text" class="result" placeholder="Your BMI will be shown here after calculation" disabled>
+                            <p class="description">Description :</p>
+                            <form action="">
+                                <button type="submit">Reset </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>
+
+
+
+
